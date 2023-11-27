@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container text-center">
+    <h2>Book a Table</h2>
+    <p>Book a table at our restaurant from 1pm till midnight for maximum 2 hours</p>
+    <form method="post">
+         {% csrf_token %}
+        <div class="form-group">
+            {{ form.as_p}}
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Send Message</button>
+    </form>
+</div>
+
+{% if form.is_valid and search_text %}
+{% endif %}
+{% endblock %}
