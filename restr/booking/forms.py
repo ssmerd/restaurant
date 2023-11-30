@@ -3,6 +3,7 @@ from django import forms
 from django.core.exceptions import ValidationError
 from django.forms.utils import ErrorList
 from django.utils.safestring import mark_safe
+from django.contrib import messages
 
 from datetime import datetime
 
@@ -76,7 +77,7 @@ class BookTableForm(forms.Form):
         time = cleaned_data.get("time")
 
         if datetime.combine(date, time) < now:
-            self.add_error(None, ValidationError("Enter future date an time."))
+            self.add_error(None, "Enter future date an time.")
         
         restaurant_opens = datetime(1,1,1,RESTAURANT_OPENS_HOUR,0)
         restaurant_closes = datetime(1,1,1,RESTAURANT_CLOSES_HOUR, RESTAURANT_CLOSES_MIN)
