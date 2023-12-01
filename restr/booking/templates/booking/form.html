@@ -2,23 +2,35 @@
 
 {% block content %}
 
-<div class="container text-center">
-    <h2>Book a Table</h2>
-    <p>Book a table at our restaurant from 1pm till midnight for maximum 2 hours</p>
+<section id="book-a-table">
 
-    {% for message in messages %}
-    <div class="alert alert-{% if message.level_tag == 'error' %}danger{% else %}{{ message.level_tag }}{% endif %} alert-dismissible fade show"
-        role="alert">
-        {{ message }}
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-    </div>
-    {% endfor %}
+    <div class="container text-center">
+        <h2>Book a Table</h2>
+        <p>Book a table at our restaurant from 1pm till midnight for maximum 2 hours</p>
 
-    {% if form.errors %}
-        {% for field in form %}
-            {% for error in field.errors %}
+        {% for message in messages %}
+        <div class="alert alert-{% if message.level_tag == 'error' %}danger{% else %}{{ message.level_tag }}{% endif %} alert-dismissible fade show"
+            role="alert">
+            {{ message }}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        {% endfor %}
+
+        {% if form.errors %}
+            {% for field in form %}
+                {% for error in field.errors %}
+                <div class="alert alert-danger alert-dismissible fade show">
+                    <strong>{{ error|escape }}</strong>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                {% endfor %}
+            {% endfor %}
+
+            {% for error in form.non_field_errors %}
             <div class="alert alert-danger alert-dismissible fade show">
                 <strong>{{ error|escape }}</strong>
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -26,66 +38,57 @@
                 </button>
             </div>
             {% endfor %}
-        {% endfor %}
 
-        {% for error in form.non_field_errors %}
-        <div class="alert alert-danger alert-dismissible fade show">
-            <strong>{{ error|escape }}</strong>
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
-        {% endfor %}
+        {% endif %}
 
-    {% endif %}
+        <form method="post" role="form">
+            {% csrf_token %}
+            <div class="form-row d-flex justify-content-center">
+                <div class="col-lg-4 col-md-4">
+                    <div class="form-group">
+                        {{ form.name }}
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <div class="form-group">
+                        {{ form.email }}
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <div class="form-group">
+                        {{ form.phone }}
+                    </div>
+                </div>
+            </div>
+            <div class="form-row d-flex justify-content-center">
+                <div class="col-lg-4 col-md-4">
+                    <div class="form-group">
+                        {{ form.date }}
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <div class="form-group">
+                        {{ form.time }}
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <div class="form-group">
+                        {{ form.no_of_people }}
+                    </div>
+                </div>
+            </div>
+            <div class="form-row d-flex justify-content-center">
+                <div class="form-group col-12">
+                    {{ form.message }}
+                </div>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </div>
+        </form>
+    </div>
 
-    <form method="post" role="form">
-        {% csrf_token %}
-        <div class="form-row d-flex justify-content-center">
-            <div class="col-lg-4 col-md-4">
-                <div class="form-group">
-                    {{ form.name }}
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-4">
-                <div class="form-group">
-                    {{ form.email }}
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-4">
-                <div class="form-group">
-                    {{ form.phone }}
-                </div>
-            </div>
-        </div>
-        <div class="form-row d-flex justify-content-center">
-            <div class="col-lg-4 col-md-4">
-                <div class="form-group">
-                    {{ form.date }}
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-4">
-                <div class="form-group">
-                    {{ form.time }}
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-4">
-                <div class="form-group">
-                    {{ form.no_of_people }}
-                </div>
-            </div>
-        </div>
-        <div class="form-row d-flex justify-content-center">
-            <div class="form-group col-12">
-                {{ form.message }}
-            </div>
-        </div>
-        <div class="form-group">
-            <button type="submit" class="btn btn-primary">Send Message</button>
-        </div>
-    </form>
-</div>
+</section>
 
-{% if form.is_valid %}
-{% endif %}
-{% endblock %}
+{%endblock%}
+
