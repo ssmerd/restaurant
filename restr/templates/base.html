@@ -63,128 +63,59 @@
     <!-- ======= Hero Section ======= -->
     <section id="hero">
         <div class="hero-container">
-            <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
 
-                <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
-
-                <div class="carousel-inner" role="listbox">
-
-                    <!-- Slide 1 -->
-                    
-
-                    <div class="carousel-item active" style="background-image: url( {% static '/images/slide/slide-1.jpg' %} );">
-                        <div class="carousel-container">
-                            <div class="carousel-content">
-                                <h2 class="animate__animated animate__fadeInDown"><span>Delicious</span> Restaurant</h2>
-                                <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui
-                                    aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem
-                                    mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti
-                                    vel. Minus et tempore modi architecto.</p>
-                                <div>
-                                    <a href="#menu" class="btn-menu animate__animated animate__fadeInUp scrollto">Our
-                                        Menu</a>
-                                    <a href="#book-a-table"
-                                        class="btn-book animate__animated animate__fadeInUp scrollto">Book a Table</a>
-                                </div>
-                            </div>
+            <!-- Hero -->
+            <div class="carousel-item active" style="background-image: url( {% static '/images/slide/hero.jpg' %} );">
+                <div class="carousel-container">
+                    <div class="carousel-content">
+                        <h2 class="animate__animated animate__fadeInDown"><span>Delicious</span> Restaurant</h2>
+                        <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui
+                            aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem
+                            mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti
+                            vel. Minus et tempore modi architecto.</p>
+                        <div>
+                            <a href="#menu" class="btn-menu animate__animated animate__fadeInUp scrollto">Our
+                                Menu</a>
+                            <a href="#book-a-table" class="btn-book animate__animated animate__fadeInUp scrollto">Book a
+                                Table</a>
                         </div>
                     </div>
-
-                    <!-- Slide 2 -->
-                    <div class="carousel-item" style="background-image: url(images/slide/slide-2.jpg);">
-                        <div class="carousel-container">
-                            <div class="carousel-content">
-                                <h2 class="animate__animated animate__fadeInDown">Lorem Ipsum Dolor</h2>
-                                <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui
-                                    aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem
-                                    mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti
-                                    vel. Minus et tempore modi architecto.</p>
-                                <div>
-                                    <a href="#menu" class="btn-menu animate__animated animate__fadeInUp scrollto">Our
-                                        Menu</a>
-                                    <a href="#book-a-table"
-                                        class="btn-book animate__animated animate__fadeInUp scrollto">Book a Table</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Slide 3 -->
-                    <div class="carousel-item" style="background-image: url(images/slide/slide-3.jpg);">
-                        <div class="carousel-container">
-                            <div class="carousel-content">
-                                <h2 class="animate__animated animate__fadeInDown">Sequi ea ut et est quaerat</h2>
-                                <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui
-                                    aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem
-                                    mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti
-                                    vel. Minus et tempore modi architecto.</p>
-                                <div>
-                                    <a href="#menu" class="btn-menu animate__animated animate__fadeInUp scrollto">Our
-                                        Menu</a>
-                                    <a href="#book-a-table"
-                                        class="btn-book animate__animated animate__fadeInUp scrollto">Book a Table</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
-
-                <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
-                </a>
-
-                <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
-                    <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
-                </a>
-
             </div>
-        </div>
+
     </section><!-- End Hero -->
 
 
     <main id="main">
-
         <!-- ======= About Section ======= -->
         <section id="about" class="about">
             <div class="container-fluid">
-
                 <div class="row">
-
                     <div class="col-lg-5 align-items-stretch video-box"
-                        style='background-image: url("assets/img/about.jpg");'>
-                        <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox play-btn mb-4"
-                            data-vbtype="video" data-autoplay="true"></a>
+                        style='background-image: url({% static '/images/slide/about.jpg' %});'>
                     </div>
-
                     <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch">
 
                         <div class="content">
-                            <h3>Eum ipsam laborum deleniti <strong>velit pariatur architecto aut nihil</strong></h3>
+                            <h3>Welcome to Delicious, where culinary artistry meets a warm and inviting atmosphere.
+                            </h3>
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit
+                                Nestled in Dublin, our restaurant is a haven for food enthusiasts seeking an exceptional
+                                dining experience.
                             </p>
-                            <p class="fst-italic">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore
-                                magna aliqua.
-                            </p>
-                            <ul>
-                                <li><i class="bx bx-check-double"></i> Ullamco laboris nisi ut aliquip ex ea commodo
-                                    consequat.</li>
-                                <li><i class="bx bx-check-double"></i> Duis aute irure dolor in reprehenderit in
-                                    voluptate velit.</li>
-                                <li><i class="bx bx-check-double"></i> Ullamco laboris nisi ut aliquip ex ea commodo
-                                    consequat. Duis aute irure dolor in reprehenderit in voluptate trideta
-                                    storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
-                            </ul>
                             <p>
-                                Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                                reprehenderit in voluptate
-                                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                                proident, sunt in
-                                culpa qui officia deserunt mollit anim id est laborum
+                                At Delicious, we take pride in crafting a menu that blends innovative flavors with
+                                classic dishes, using only the freshest and finest ingredients. Our talented chefs draw
+                                inspiration from diverse culinary traditions to create a menu that caters to a variety
+                                of tastes.
+                            </p>
+                            <p>
+                                Step into our inviting space, where modern design seamlessly merges with a cozy
+                                ambiance. Whether you're looking for an intimate dinner for two, a celebratory gathering
+                                with friends, or a corporate event, our versatile and thoughtfully designed spaces
+                                provide the perfect backdrop for any occasion.
+
+
                             </p>
                         </div>
 
@@ -218,7 +149,7 @@
 
                     <div class="col-lg-6 menu-item filter-starters">
                         <div class="menu-content">
-                            <a href="#">Lobster Bisque</a><span>$5.95</span>
+                            <a href="#">Lobster Bisque</a><span>€5.95</span>
                         </div>
                         <div class="menu-ingredients">
                             Lorem, deren, trataro, filede, nerada
@@ -227,7 +158,7 @@
 
                     <div class="col-lg-6 menu-item filter-specialty">
                         <div class="menu-content">
-                            <a href="#">Bread barrel</a><span>$6.95</span>
+                            <a href="#">Bread barrel</a><span>€6.95</span>
                         </div>
                         <div class="menu-ingredients">
                             Lorem, deren, trataro, filede, nerada
@@ -236,7 +167,7 @@
 
                     <div class="col-lg-6 menu-item filter-starters">
                         <div class="menu-content">
-                            <a href="#">Crab Cake</a><span>$7.95</span>
+                            <a href="#">Crab Cake</a><span>€7.95</span>
                         </div>
                         <div class="menu-ingredients">
                             A delicate crab cake served on a toasted roll with lettuce and tartar sauce
@@ -245,7 +176,7 @@
 
                     <div class="col-lg-6 menu-item filter-salads">
                         <div class="menu-content">
-                            <a href="#">Caesar Selections</a><span>$8.95</span>
+                            <a href="#">Caesar Selections</a><span>€8.95</span>
                         </div>
                         <div class="menu-ingredients">
                             Lorem, deren, trataro, filede, nerada
@@ -254,7 +185,7 @@
 
                     <div class="col-lg-6 menu-item filter-specialty">
                         <div class="menu-content">
-                            <a href="#">Tuscan Grilled</a><span>$9.95</span>
+                            <a href="#">Tuscan Grilled</a><span>€9.95</span>
                         </div>
                         <div class="menu-ingredients">
                             Grilled chicken with provolone, artichoke hearts, and roasted red pesto
@@ -263,7 +194,7 @@
 
                     <div class="col-lg-6 menu-item filter-starters">
                         <div class="menu-content">
-                            <a href="#">Mozzarella Stick</a><span>$4.95</span>
+                            <a href="#">Mozzarella Stick</a><span>€4.95</span>
                         </div>
                         <div class="menu-ingredients">
                             Lorem, deren, trataro, filede, nerada
@@ -272,7 +203,7 @@
 
                     <div class="col-lg-6 menu-item filter-salads">
                         <div class="menu-content">
-                            <a href="#">Greek Salad</a><span>$9.95</span>
+                            <a href="#">Greek Salad</a><span>€9.95</span>
                         </div>
                         <div class="menu-ingredients">
                             Fresh spinach, crisp romaine, tomatoes, and Greek olives
@@ -281,7 +212,7 @@
 
                     <div class="col-lg-6 menu-item filter-salads">
                         <div class="menu-content">
-                            <a href="#">Spinach Salad</a><span>$9.95</span>
+                            <a href="#">Spinach Salad</a><span>€9.95</span>
                         </div>
                         <div class="menu-ingredients">
                             Fresh spinach with mushrooms, hard boiled egg, and warm bacon vinaigrette
@@ -290,7 +221,7 @@
 
                     <div class="col-lg-6 menu-item filter-specialty">
                         <div class="menu-content">
-                            <a href="#">Lobster Roll</a><span>$12.95</span>
+                            <a href="#">Lobster Roll</a><span>€12.95</span>
                         </div>
                         <div class="menu-ingredients">
                             Plump lobster meat, mayo and crisp lettuce on a toasted bulky roll
@@ -305,6 +236,14 @@
         {% block content %}
         {% endblock %}
 
+        <div class="map">
+            <iframe style="border:0; width: 100%; height: 350px;"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19076.130901118708!2d-6.2167594256836365!3d53.29819809999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48670e99733f3617%3A0x7ff7202fe3dea603!2sCode%20Institute!5e0!3m2!1sen!2sie!4v1701711569033!5m2!1sen!2sie"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+
     </main>
     <!-- Copyright -->
     <footer class="page-footer font-small blue">
@@ -314,15 +253,19 @@
         </div>
     </footer>
     <!-- Copyright -->
+
+    <script src={% static "js/main.js" %}></script>
+    <script src="{% static 'js/isotope.pkgd.js' %}"></script>
+
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-    </script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
+
 </body>
 
 </html>
