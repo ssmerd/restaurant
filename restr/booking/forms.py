@@ -12,10 +12,10 @@ from datetime import datetime
 MIN_NO_OF_PEOPLE = 1
 MAX_NO_OF_PEOPLE = 10
 
-RESTAURANT_OPENS_HOUR = 13
+RESTAURANT_OPENS_HOUR = 11
 RESTAURANT_CLOSES_HOUR = 23
-RESTAURANT_CLOSES_MIN = 59
-RESTAURANT_OPENING_MESSAGE = "The opening time are from 1pm till midnight."
+RESTAURANT_CLOSES_MIN = 00
+RESTAURANT_OPENING_MESSAGE = "The opening time are from 11am till 11pm."
 
 def validate_no_of_people(value):
     """ Validate the number of people entered in the form. """

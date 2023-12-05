@@ -4,10 +4,9 @@ from .forms import BookTableForm, DivErrorList
 from .utils import print_parameters
 from .models import BookTable
 
-
-# Create your views here.
 def index(request):
-
+    """ Main view """
+    
     if request.method == "POST":
         form = BookTableForm(request.POST, error_class=DivErrorList)
     else:
@@ -18,15 +17,16 @@ def index(request):
         if form.is_valid():
             print_parameters(form)
             # save_booking(form)
-            messages.success(request, "Your booking has been sent.")
+            messages.success(request, "Your booking has been sent. You'll get a confirmation email.")
             form = BookTableForm()
 
     return render(request, 'booking/form.html', {"form": form})
 
 
 def save_booking(form):
-    table = BookTable()
+    """ The method saves the booking to the database."""
 
+    table = BookTable()
     table.name = form.cleaned_data["name"]
     table.email = form.cleaned_data["email"]
     table.phone = form.cleaned_data["phone"]
