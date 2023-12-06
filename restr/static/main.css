@@ -558,7 +558,7 @@ body {
   
   .section-title h2 {
     margin: 15px 0 0 0;
-    font-size: 32px;
+    font-size: 45px;
     font-weight: 700;
     color: #5f5950;
   }
@@ -1082,6 +1082,10 @@ body {
   /*--------------------------------------------------------------
   # Book A Table
   --------------------------------------------------------------*/
+  .book-a-table h2 {
+    font-size: 45px;
+  }
+  
   .book-a-table .php-email-form {
     width: 100%;
     box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
