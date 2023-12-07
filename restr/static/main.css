@@ -445,7 +445,7 @@ body {
     color: #fff;
   }
   
-  #hero .carousel-inner .carousel-item {
+  /* #hero .carousel-inner .carousel-item {
     transition-property: opacity;
     background-position: center top;
   }
@@ -469,8 +469,8 @@ body {
   #hero .carousel-inner .active.carousel-item-end {
     left: 0;
     transform: translate3d(0, 0, 0);
-  }
-  
+  } */
+/*   
   #hero .carousel-control-next-icon,
   #hero .carousel-control-prev-icon {
     background: none;
@@ -481,7 +481,7 @@ body {
     background: rgba(255, 255, 255, 0.2);
     border-radius: 50px;
     transition: 0.3s;
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(60, 14, 14, 0.5);
     width: 54px;
     height: 54px;
     display: flex;
@@ -498,7 +498,7 @@ body {
   #hero .carousel-indicators li {
     cursor: pointer;
     list-style-type: none;
-  }
+  } */
   
   #hero .btn-menu,
   #hero .btn-book {
@@ -581,7 +581,7 @@ body {
   /*--------------------------------------------------------------
   # Breadcrumbs
   --------------------------------------------------------------*/
-  .breadcrumbs {
+  /* .breadcrumbs {
     padding: 20px 0;
     background-color: #f2f1ef;
     min-height: 40px;
@@ -638,7 +638,7 @@ body {
     .breadcrumbs ol li {
       display: inline-block;
     }
-  }
+  } */
   
   /*--------------------------------------------------------------
   # About
@@ -714,7 +714,7 @@ body {
     overflow: hidden;
   }
   
-  .about .play-btn::after {
+  /* .about .play-btn::after {
     content: "";
     position: absolute;
     left: 50%;
@@ -767,7 +767,7 @@ body {
     z-index: 200;
     animation: none;
     border-radius: 0;
-  }
+  } */
   
   @media (max-width: 1024px) {
   
@@ -788,7 +788,7 @@ body {
     }
   }
   
-  @keyframes pulsate-btn {
+  /* @keyframes pulsate-btn {
     0% {
       transform: scale(0.6, 0.6);
       opacity: 1;
@@ -798,12 +798,12 @@ body {
       transform: scale(1, 1);
       opacity: 0;
     }
-  }
+  } */
   
   /*--------------------------------------------------------------
   # Whu Us
   --------------------------------------------------------------*/
-  .why-us .box {
+  /* .why-us .box {
     padding: 50px 30px;
     box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
     transition: all ease-in-out 0.3s;
@@ -843,7 +843,7 @@ body {
   .why-us .box:hover p {
     color: #fff;
   }
-  
+   */
   /*--------------------------------------------------------------
   # Menu Section
   --------------------------------------------------------------*/
@@ -988,7 +988,7 @@ body {
   /*--------------------------------------------------------------
   # Events
   --------------------------------------------------------------*/
-  .events {
+  /* .events {
     background: url(../img/events-bg.jpg) center center no-repeat;
     background-size: cover;
     position: relative;
@@ -1078,7 +1078,7 @@ body {
   .events .swiper-pagination .swiper-pagination-bullet-active {
     background-color: #ffb03b;
   }
-  
+   */
   /*--------------------------------------------------------------
   # Book A Table
   --------------------------------------------------------------*/
@@ -1177,7 +1177,7 @@ body {
   /*--------------------------------------------------------------
   # Gallery
   --------------------------------------------------------------*/
-  .gallery {
+  /* .gallery {
     padding-bottom: 0;
   }
   
@@ -1198,7 +1198,7 @@ body {
   /*--------------------------------------------------------------
   # Chefs
   --------------------------------------------------------------*/
-  .chefs {
+  /* .chefs {
     background: url("../img/chefs-bg.jpg") center center no-repeat;
     background-size: cover;
     padding: 60px 0;
@@ -1300,11 +1300,11 @@ body {
       background-attachment: fixed;
     }
   }
-  
+   */
   /*--------------------------------------------------------------
   # Testimonials
   --------------------------------------------------------------*/
-  .testimonials {
+  /* .testimonials {
     padding: 80px 0;
     background: url("../img/testimonials-bg.jpg") no-repeat;
     background-position: center center;
@@ -1408,7 +1408,7 @@ body {
     .testimonials .testimonial-item p {
       width: 80%;
     }
-  }
+  } */ 
   
   /*--------------------------------------------------------------
   # Contact
@@ -1457,7 +1457,7 @@ body {
     color: #fff;
   }
   
-  .contact .php-email-form {
+  /* .contact .php-email-form {
     width: 100%;
     box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
     padding: 30px;
@@ -1542,7 +1542,7 @@ body {
       transform: rotate(360deg);
     }
   }
-  
+   */
   /*--------------------------------------------------------------
   # Footer
   --------------------------------------------------------------*/
