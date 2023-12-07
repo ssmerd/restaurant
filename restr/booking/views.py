@@ -13,7 +13,6 @@ def index(request):
         form = BookTableForm()
 
     if request.method == "POST":
-        form = BookTableForm(request.POST, error_class=DivErrorList)
         if form.is_valid():
             print_parameters(form)
             # save_booking(form)
