@@ -7,7 +7,7 @@
 
     <title>Epicure Junction</title>
 
-    
+
     <!-- Google Fonts -->
     <link
         href="https://fonts.googleapis.com/css?family=Ephesis|Poppins:300,300i,400,400i,600,600i,700,700i|Comic+Neue:300,300i,400,400i,700,700i"
@@ -38,7 +38,25 @@
             <i class="fa-solid fa-door-open ms-4 d-none d-lg-flex align-items-center">
                 <span>Mon-Sat: 11:00 AM - 23:00 PM</span>
             </i>
+
         </div>
+        <div class="container-fluid container-xl d-flex align-items-center justify-content-center               justify-content-lg-end">
+                {% if user.is_authenticated %}
+                <i class="d-flex align-items-center">
+                    Hi {{ user.username }}! &nbsp&nbsp 
+                    <a href="{% url 'accounts:logout' %}">Log Out</a>
+                </i>
+                {% else %}
+                <i class="d-flex align-items-center">
+                    You are not logged in. &nbsp&nbsp 
+                    <a href=" {% url 'accounts:login' %}">Log In&nbsp&nbsp</a>
+                </i>
+                <i class="d-flex align-items-center">
+                    <a href=" {% url 'signup' %}">Signup</a>
+                </i>
+                {% endif %}
+        </div>
+
     </section>
 
     <!-- ======= Header ======= -->
@@ -89,206 +107,58 @@
     </section><!-- End Hero -->
 
 
-    <main id="main">
-        <!-- ======= About Section ======= -->
-        <section id="about" class="about">
-            <div class="container-fluid">
+
+    {% block content %}
+    {% endblock %}
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+        <div class="container">
+
+            <div class="section-title">
+                <h2><span>Contact</span> Us</h2>
+            </div>
+        </div>
+
+        <div class="map">
+            <iframe style="border:0; width: 100%; height: 350px;"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19076.130901118708!2d-6.2167594256836365!3d53.29819809999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48670e99733f3617%3A0x7ff7202fe3dea603!2sCode%20Institute!5e0!3m2!1sen!2sie!4v1701711569033!5m2!1sen!2sie"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+
+        <div class="container mt-5">
+
+            <div class="info-wrap">
                 <div class="row">
-                    <div class="col-lg-5 align-items-stretch video-box"
-                        style='background-image: url({% static '/images/about.jpg' %});'>
-                    </div>
-                    <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch">
-
-                        <div class="content">
-                            <h3>Welcome to Epicure Junction, where culinary artistry meets a warm and inviting
-                                atmosphere.
-                            </h3>
-                            <p>
-                                Nestled in Dublin, our restaurant is a haven for food enthusiasts seeking an exceptional
-                                dining experience.
-                            </p>
-                            <p>
-                                At Epicure Junction, we take pride in crafting a menu that blends innovative flavors
-                                with
-                                classic dishes, using only the freshest and finest ingredients. Our talented chefs draw
-                                inspiration from diverse culinary traditions to create a menu that caters to a variety
-                                of tastes.
-                            </p>
-                            <p>
-                                Step into our inviting space, where modern design seamlessly merges with a cozy
-                                ambiance. Whether you're looking for an intimate dinner for two, a celebratory gathering
-                                with friends, or a corporate event, our versatile and thoughtfully designed spaces
-                                provide the perfect backdrop for any occasion.
-
-
-                            </p>
-                        </div>
-
+                    <div class="col-lg-3 col-md-6 info">
+                        <i class="fa-solid fa-location-crosshairs"></i>
+                        <h4>Location:</h4>
+                        <p>Code Institute<br>Blackrock, Ireland</p>
                     </div>
 
-                </div>
-
-            </div>
-        </section><!-- End About Section -->
-
-        <!-- ======= Menu Section ======= -->
-        <section id="menu" class="menu">
-            <div class="container">
-
-                <div class="section-title">
-                    <h2>Check our tasty <span>Menu</span></h2>
-                </div>
-
-                <div class="row">
-                    <div class="col-lg-12 d-flex justify-content-center">
-                        <ul id="menu-flters">
-                            <li data-filter="*" class="filter-active">Show All</li>
-                            <li data-filter=".filter-starters">Starters</li>
-                            <li data-filter=".filter-salads">Salads</li>
-                            <li data-filter=".filter-specialty">Specialty</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="row menu-container">
-
-                    <div class="col-lg-6 menu-item filter-starters">
-                        <div class="menu-content">
-                            <a href="#">Lobster Bisque</a><span>€5.95</span>
-                        </div>
-                        <div class="menu-ingredients">
-                            Lorem, deren, trataro, filede, nerada
-                        </div>
+                    <div class="col-lg-3 col-md-6 info mt-4 mt-lg-0">
+                        <i class="fa-solid fa-door-open"></i>
+                        <h4>Open Hours:</h4>
+                        <p>Monday-Saturday:<br>11:00 AM - 2300 PM</p>
                     </div>
 
-                    <div class="col-lg-6 menu-item filter-specialty">
-                        <div class="menu-content">
-                            <a href="#">Bread barrel</a><span>€6.95</span>
-                        </div>
-                        <div class="menu-ingredients">
-                            Lorem, deren, trataro, filede, nerada
-                        </div>
+                    <div class="col-lg-3 col-md-6 info mt-4 mt-lg-0">
+                        <i class="fa-regular fa-envelope"></i>
+                        <h4>Email:</h4>
+                        <p>info@epicure.com</p>
                     </div>
 
-                    <div class="col-lg-6 menu-item filter-starters">
-                        <div class="menu-content">
-                            <a href="#">Crab Cake</a><span>€7.95</span>
-                        </div>
-                        <div class="menu-ingredients">
-                            A delicate crab cake served on a toasted roll with lettuce and tartar sauce
-                        </div>
-                    </div>
-
-                    <div class="col-lg-6 menu-item filter-salads">
-                        <div class="menu-content">
-                            <a href="#">Caesar Selections</a><span>€8.95</span>
-                        </div>
-                        <div class="menu-ingredients">
-                            Lorem, deren, trataro, filede, nerada
-                        </div>
-                    </div>
-
-                    <div class="col-lg-6 menu-item filter-specialty">
-                        <div class="menu-content">
-                            <a href="#">Tuscan Grilled</a><span>€9.95</span>
-                        </div>
-                        <div class="menu-ingredients">
-                            Grilled chicken with provolone, artichoke hearts, and roasted red pesto
-                        </div>
-                    </div>
-
-                    <div class="col-lg-6 menu-item filter-starters">
-                        <div class="menu-content">
-                            <a href="#">Mozzarella Stick</a><span>€4.95</span>
-                        </div>
-                        <div class="menu-ingredients">
-                            Lorem, deren, trataro, filede, nerada
-                        </div>
-                    </div>
-
-                    <div class="col-lg-6 menu-item filter-salads">
-                        <div class="menu-content">
-                            <a href="#">Greek Salad</a><span>€9.95</span>
-                        </div>
-                        <div class="menu-ingredients">
-                            Fresh spinach, crisp romaine, tomatoes, and Greek olives
-                        </div>
-                    </div>
-
-                    <div class="col-lg-6 menu-item filter-salads">
-                        <div class="menu-content">
-                            <a href="#">Spinach Salad</a><span>€9.95</span>
-                        </div>
-                        <div class="menu-ingredients">
-                            Fresh spinach with mushrooms, hard boiled egg, and warm bacon vinaigrette
-                        </div>
-                    </div>
-
-                    <div class="col-lg-6 menu-item filter-specialty">
-                        <div class="menu-content">
-                            <a href="#">Lobster Roll</a><span>€12.95</span>
-                        </div>
-                        <div class="menu-ingredients">
-                            Plump lobster meat, mayo and crisp lettuce on a toasted bulky roll
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-        </section><!-- End Menu Section -->
-
-        {% block content %}
-        {% endblock %}
-
-        <!-- ======= Contact Section ======= -->
-        <section id="contact" class="contact">
-            <div class="container">
-
-                <div class="section-title">
-                    <h2><span>Contact</span> Us</h2>
-                </div>
-            </div>
-
-            <div class="map">
-                <iframe style="border:0; width: 100%; height: 350px;"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19076.130901118708!2d-6.2167594256836365!3d53.29819809999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48670e99733f3617%3A0x7ff7202fe3dea603!2sCode%20Institute!5e0!3m2!1sen!2sie!4v1701711569033!5m2!1sen!2sie"
-                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-
-
-            <div class="container mt-5">
-
-                <div class="info-wrap">
-                    <div class="row">
-                        <div class="col-lg-3 col-md-6 info">
-                            <i class="fa-solid fa-location-crosshairs"></i>
-                            <h4>Location:</h4>
-                            <p>Code Institute<br>Blackrock, Ireland</p>
-                        </div>
-
-                        <div class="col-lg-3 col-md-6 info mt-4 mt-lg-0">
-                            <i class="fa-solid fa-door-open"></i>
-                            <h4>Open Hours:</h4>
-                            <p>Monday-Saturday:<br>11:00 AM - 2300 PM</p>
-                        </div>
-
-                        <div class="col-lg-3 col-md-6 info mt-4 mt-lg-0">
-                            <i class="fa-regular fa-envelope"></i>
-                            <h4>Email:</h4>
-                            <p>info@epicure.com</p>
-                        </div>
-
-                        <div class="col-lg-3 col-md-6 info mt-4 mt-lg-0">
-                            <i class="fa-solid fa-phone"></i>
-                            <h4>Call:</h4>
-                            <p>085 1234567</p>
-                        </div>
+                    <div class="col-lg-3 col-md-6 info mt-4 mt-lg-0">
+                        <i class="fa-solid fa-phone"></i>
+                        <h4>Call:</h4>
+                        <p>085 1234567</p>
                     </div>
                 </div>
             </div>
-        </section><!-- End Contact -->
+        </div>
+    </section><!-- End Contact -->
 
     </main>
     <!-- Copyright -->

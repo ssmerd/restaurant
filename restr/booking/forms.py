@@ -5,6 +5,7 @@ from django.forms.utils import ErrorList
 from django.utils.safestring import mark_safe
 from django.contrib import messages
 
+
 from datetime import datetime
 
 """ Global variables """
@@ -94,3 +95,4 @@ class DivErrorList(ErrorList):
          if not self: return ''
          return mark_safe('<div class="errorlist">%s</div>' % ''.join(['<div class="alert alert-danger">%s</div>' % e for e in self]))  
        
+

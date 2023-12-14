@@ -1,0 +1,159 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% load static %}
+
+<main id="main">
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-5 align-items-stretch video-box"
+                    style='background-image: url({% static '/images/about.jpg' %});'>
+                </div>
+                <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch">
+
+                    <div class="content">
+                        <h3>Welcome to Epicure Junction, where culinary artistry meets a warm and inviting
+                            atmosphere.
+                        </h3>
+                        <p>
+                            Nestled in Dublin, our restaurant is a haven for food enthusiasts seeking an exceptional
+                            dining experience.
+                        </p>
+                        <p>
+                            At Epicure Junction, we take pride in crafting a menu that blends innovative flavors
+                            with
+                            classic dishes, using only the freshest and finest ingredients. Our talented chefs draw
+                            inspiration from diverse culinary traditions to create a menu that caters to a variety
+                            of tastes.
+                        </p>
+                        <p>
+                            Step into our inviting space, where modern design seamlessly merges with a cozy
+                            ambiance. Whether you're looking for an intimate dinner for two, a celebratory gathering
+                            with friends, or a corporate event, our versatile and thoughtfully designed spaces
+                            provide the perfect backdrop for any occasion.
+
+
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Menu Section ======= -->
+    <section id="menu" class="menu">
+        <div class="container">
+
+            <div class="section-title">
+                <h2>Check our tasty <span>Menu</span></h2>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12 d-flex justify-content-center">
+                    <ul id="menu-flters">
+                        <li data-filter="*" class="filter-active">Show All</li>
+                        <li data-filter=".filter-starters">Starters</li>
+                        <li data-filter=".filter-salads">Salads</li>
+                        <li data-filter=".filter-specialty">Specialty</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row menu-container">
+
+                <div class="col-lg-6 menu-item filter-starters">
+                    <div class="menu-content">
+                        <a href="#">Lobster Bisque</a><span>€5.95</span>
+                    </div>
+                    <div class="menu-ingredients">
+                        Lorem, deren, trataro, filede, nerada
+                    </div>
+                </div>
+
+                <div class="col-lg-6 menu-item filter-specialty">
+                    <div class="menu-content">
+                        <a href="#">Bread barrel</a><span>€6.95</span>
+                    </div>
+                    <div class="menu-ingredients">
+                        Lorem, deren, trataro, filede, nerada
+                    </div>
+                </div>
+
+                <div class="col-lg-6 menu-item filter-starters">
+                    <div class="menu-content">
+                        <a href="#">Crab Cake</a><span>€7.95</span>
+                    </div>
+                    <div class="menu-ingredients">
+                        A delicate crab cake served on a toasted roll with lettuce and tartar sauce
+                    </div>
+                </div>
+
+                <div class="col-lg-6 menu-item filter-salads">
+                    <div class="menu-content">
+                        <a href="#">Caesar Selections</a><span>€8.95</span>
+                    </div>
+                    <div class="menu-ingredients">
+                        Lorem, deren, trataro, filede, nerada
+                    </div>
+                </div>
+
+                <div class="col-lg-6 menu-item filter-specialty">
+                    <div class="menu-content">
+                        <a href="#">Tuscan Grilled</a><span>€9.95</span>
+                    </div>
+                    <div class="menu-ingredients">
+                        Grilled chicken with provolone, artichoke hearts, and roasted red pesto
+                    </div>
+                </div>
+
+                <div class="col-lg-6 menu-item filter-starters">
+                    <div class="menu-content">
+                        <a href="#">Mozzarella Stick</a><span>€4.95</span>
+                    </div>
+                    <div class="menu-ingredients">
+                        Lorem, deren, trataro, filede, nerada
+                    </div>
+                </div>
+
+                <div class="col-lg-6 menu-item filter-salads">
+                    <div class="menu-content">
+                        <a href="#">Greek Salad</a><span>€9.95</span>
+                    </div>
+                    <div class="menu-ingredients">
+                        Fresh spinach, crisp romaine, tomatoes, and Greek olives
+                    </div>
+                </div>
+
+                <div class="col-lg-6 menu-item filter-salads">
+                    <div class="menu-content">
+                        <a href="#">Spinach Salad</a><span>€9.95</span>
+                    </div>
+                    <div class="menu-ingredients">
+                        Fresh spinach with mushrooms, hard boiled egg, and warm bacon vinaigrette
+                    </div>
+                </div>
+
+                <div class="col-lg-6 menu-item filter-specialty">
+                    <div class="menu-content">
+                        <a href="#">Lobster Roll</a><span>€12.95</span>
+                    </div>
+                    <div class="menu-ingredients">
+                        Plump lobster meat, mayo and crisp lettuce on a toasted bulky roll
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section><!-- End Menu Section -->
+
+    {% block form-content %}
+    {% endblock %}
+
+{% endblock %}

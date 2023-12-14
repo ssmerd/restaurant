@@ -19,3 +19,6 @@ class BookTable(models.Model):
     
     message = models.CharField(max_length=250, blank=True)
 
+
+class Table(models.Model):
+    pass
