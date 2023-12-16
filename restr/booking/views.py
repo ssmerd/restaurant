@@ -3,7 +3,7 @@ from django.contrib import messages
 from django.contrib.auth.forms import UserCreationForm
 from django.views import generic
 from django.urls import reverse_lazy
-from .forms import BookTableForm, DivErrorList
+from .forms import BookTableForm, DivErrorList, UserForm
 from .utils import print_parameters
 from .models import BookTable
 
@@ -42,6 +42,6 @@ def save_booking(form):
 
 
 class SignUpView(generic.CreateView):
-    form_class = UserCreationForm
+    form_class = UserForm
     success_url = reverse_lazy("accounts:login")
     template_name = "registration/signup.html"

@@ -4,7 +4,9 @@ from django.core.exceptions import ValidationError
 from django.forms.utils import ErrorList
 from django.utils.safestring import mark_safe
 from django.contrib import messages
+from django.contrib.auth.models import User
 
+from django.contrib.auth.forms import UserCreationForm
 
 from datetime import datetime
 
@@ -96,3 +98,20 @@ class DivErrorList(ErrorList):
          return mark_safe('<div class="errorlist">%s</div>' % ''.join(['<div class="alert alert-danger">%s</div>' % e for e in self]))  
        
 
+
+class UserForm(UserCreationForm):
+
+    class Meta:
+        model = User
+        fields = ('username', 'password1', 'password2')
+
+    def __init__(self, *args, **kwargs):
+        super(UserForm, self).__init__(*args, **kwargs)
+
+        self.fields["username"].widget.attrs["class"] = "form-control"
+        self.fields["password1"].widget.attrs["class"] = "form-control"
+        self.fields["password2"].widget.attrs["class"] = "form-control"
+        
+        self.fields["username"].widget.attrs["placeholder"] = "Enter username"
+        self.fields["password1"].widget.attrs["placeholder"] = "Enter password"
+        self.fields["password2"].widget.attrs["placeholder"] = "Repeat password"
