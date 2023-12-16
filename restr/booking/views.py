@@ -22,7 +22,7 @@ def index(request):
             messages.success(request, "Your booking has been sent. You'll get a confirmation email.")
             form = BookTableForm()
 
-    return render(request, 'booking/form.html', {"form": form})
+    return render(request, 'home.html', {"form": form})
 
 
 def save_booking(form):
